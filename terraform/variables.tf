@@ -5,7 +5,6 @@ variable "database_vpc_cidr" {
 variable "master_vpc_cidr" {
   default = "172.31.0.0/16"
 }
-}
 
 variable "master_route_table_id" {
   default = "rtb-0c82564b54a7fa492"
