@@ -32,6 +32,10 @@ variable "bastion_subnet_cidr" {
   default = "10.0.2.0/24"
 }
 
+variable "mysql_subnet_cidr" {
+  default = "10.0.1.0/24"
+}
+
 variable "bastion_ami" {
   default = "ami-0ac6b9b2908f3e20d"
 }
