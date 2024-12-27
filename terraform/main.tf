@@ -1,3 +1,7 @@
+provider "aws" {
+  region = "ap-northeast-1"
+}
+
 module "vpc" {
   source = "./modules/vpc"
   master_vpc_id = "vpc-00ec09536f7ae310f"
