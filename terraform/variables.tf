@@ -8,6 +8,7 @@ variable "database_vpc_name" {
 
 variable "master_vpc_id" {
   description = "Master VPC ID"
+  default = "vpc-00ec09536f7ae310f"
 }
 
 variable "public_subnet_cidr" {
