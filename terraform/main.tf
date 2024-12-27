@@ -5,6 +5,9 @@ provider "aws" {
 module "vpc" {
   source = "./modules/vpc"
   master_vpc_id = "vpc-00ec09536f7ae310f"
+  database_vpc_cidr = "10.0.0.0/16"
+  master_route_table_id = "rtb-0c82564b54a7fa492"
+  master_vpc_cidr = "172.31.0.0/16"
 }
 
 module "networking" {
@@ -17,6 +20,7 @@ module "networking" {
 module "security_groups" {
   source = "./modules/security_groups"
   bastion_subnet_cidr = "10.0.2.0/24"
+  mysql_subnet_cidr = "10.0.1.0/24"
 }
 
 module "instances" {
