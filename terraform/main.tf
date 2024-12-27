@@ -24,10 +24,10 @@ module "security_groups" {
 }
 
 module "instances" {
-  source = "./modules/instances"
-  bastion_ami = "ami-0ac6b9b2908f3e20d"
-  mysql_ami = "ami-0ac6b9b2908f3e20d"
+  source               = "./modules/instances"
+  bastion_ami          = "ami-0ac6b9b2908f3e20d"
+  mysql_ami            = "ami-0ac6b9b2908f3e20d"
   bastion_instance_type = "t2.micro"
-  mysql_instance_type = "t2.micro"
-  key_name = "tokyojenkins"
+  mysql_instance_type  = "t2.micro"
+  key_name             = "tokyojenkins"
 }
