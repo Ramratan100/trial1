@@ -20,7 +20,7 @@ resource "aws_vpc_peering_connection" "vpc_peering" {
 
 # Route Table for Master EC2 VPC to Database VPC
 resource "aws_route" "master_to_database" {
-  route_table_id         = "rtb-0c82564b54a7fa492"  # Replace with your Master EC2 VPC route table ID
+  route_table_id         = var.master_route_table_id  # Replace with your Master EC2 VPC route table ID
   destination_cidr_block = aws_vpc.database_vpc.cidr_block
   vpc_peering_connection_id = aws_vpc_peering_connection.vpc_peering.id
 }
