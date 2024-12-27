@@ -1,10 +1,10 @@
 variable "key_name" {
-  default = "mysql"
+  default = "tokyojenkins.pem"
 }
 
 variable "ami" {
   description = "AMI ID for the instances"
-  default     = "ami-03fa85deedfcac80b" # Replace with your desired AMI
+  default     = "ami-0ac6b9b2908f3e20d" # Replace with your desired AMI
 }
 
 variable "public_subnet_id" {
