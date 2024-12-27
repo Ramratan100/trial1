@@ -2,10 +2,6 @@ variable "database_vpc_cidr" {
   default = "10.0.0.0/16"
 }
 
-variable "database_vpc_name" {
-  default = "Database-VPC"
-}
-
 variable "master_vpc_id" {
   description = "Master VPC ID"
   default = "vpc-00ec09536f7ae310f"
