@@ -1,0 +1,15 @@
+# tasks file for mysqlrole
+    - name: Update apt cache
+      apt:
+        update_cache: yes
+
+    - name: Install MySQL server
+      apt:
+        name: mysql-server
+        state: present
+
+    - name: Start and enable MySQL
+      service:
+        name: mysql
+        state: started
+        enabled: yes
